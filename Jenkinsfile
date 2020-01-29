@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage ('Deploy') {
             agent {
-                label "${params.ENVIRONMENTS}""
+                label "${params.ENVIRONMENTS}"
             }
             steps {
                 echo "Deploying to: ${params.ENVIRONMENTS}"
