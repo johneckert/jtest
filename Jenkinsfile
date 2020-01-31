@@ -5,9 +5,7 @@ pipeline {
     }
     stages {
         stage ('Checkout Code to temp file') {
-            agent {
-                label "${params.ENVIRONMENTS}"
-            }
+            agent any
             steps {
                 //check out code
                 git 'https://github.com/johneckert/jtest.git'
